@@ -5,7 +5,7 @@
 This is a simple C++ command-line program that allows users to:
 -  View currently playing movies
 -  Choose and book available seats
-- 📺 Watch movie trailers (via YouTube link)
+-  Watch movie trailers (via YouTube link)
 
 ---
 
