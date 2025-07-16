@@ -1,11 +1,4 @@
-/******************************************************************************
 
-Welcome to GDB Online.
-  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
-  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
-  Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
 #include<iostream>
 #include<iomanip>
 #include<string>
@@ -114,7 +107,7 @@ public:
         }
     }
 
-    // Function to handle multiple seat bookings using an array
+
     void bookMultipleSeats(char seatRows[], int seatCols[], int numSeats) {
         bool validBooking = true;
         for (int i = 0; i < numSeats; ++i) {
@@ -140,7 +133,7 @@ int main() {
     cout << "Welcome to NSR Cinema\n";
 
     Cinema c1;
-    Seats se;  // Create a single instance of Seats class
+    Seats se;  
     int choice;
     char seatRow;
     int seatCol;
@@ -172,21 +165,21 @@ int main() {
                     break;
                 }
 
-                se.movie(choice);  // Display available seats for the selected movie
+                se.movie(choice);  
                 cout << "Enter seats to book (e.g., A1 A2 B3): ";
-                cin.ignore();  // To ignore the leftover newline character
+                cin.ignore();  
                 string input;
-                getline(cin, input);  // Get the full line of seat choices
+                getline(cin, input);  
 
                 stringstream ss(input);
-                char seatRows[10];  // Array to store rows (max 10 seats for simplicity)
-                int seatCols[10];   // Array to store columns (max 10 seats for simplicity)
+                char seatRows[10];  
+                int seatCols[10];   
                 int numSeats = 0;
 
                 while (ss >> seatRow >> seatCol) {
                     if (seatCol < 1 || seatCol > 5 || seatRow < 'A' || seatRow > 'D') {
                         cout << "Invalid seat input detected. Please try again.\n";
-                        numSeats = 0;  // Clear seat array
+                        numSeats = 0;  
                         break;
                     }
                     seatRows[numSeats] = seatRow;
@@ -194,7 +187,7 @@ int main() {
                     numSeats++;
                 }
 
-                // If valid seat list is collected, attempt booking
+              
                 if (numSeats > 0) {
                     se.bookMultipleSeats(seatRows, seatCols, numSeats);
                 }
@@ -203,7 +196,7 @@ int main() {
             }
 
             case 3: {
-                se.viewBookings();  // Show the current seat bookings
+                se.viewBookings();  
                 break;
             }
 
@@ -218,7 +211,7 @@ int main() {
 
                 while (!validTrailerChoice) {
                     c1.displayMovie();
-                    cout << "Enter the movie number to watch the trailer (1–5): ";
+                    cout << "Enter the movie number to watch the trailer (1ï¿½5): ";
                     cin >> movieChoice;
 
                     if (cin.fail()) {
