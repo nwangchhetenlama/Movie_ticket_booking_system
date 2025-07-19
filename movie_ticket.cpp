@@ -4,6 +4,7 @@
 #include<string>
 #include<sstream> 
 #include <cstdlib>  // For processing input strings
+#include <fstream>
 using namespace std;
 
 class Cinema {
@@ -123,6 +124,32 @@ public:
             for (int i = 0; i < numSeats; ++i) {
                 bookingConfirmation(seatRows[i], seatCols[i]);
             }
+
+            int Totalprice=numSeats*220;
+            cout<<"Total price : Rs. "<<Totalprice<<endl;
+            
+            string Paymentmethod;
+            cout<<"Enter payment method (Cash / Card / Online) :";
+            cin>>Paymentmethod;
+            cout << "Payment of Rs. " << Totalprice << " received via " << Paymentmethod<< ".\n";
+            
+            ofstream receipt("receipt.txt");
+            receipt<<"----- NSR CINEMA BOOKING RECEIPT -----\n";
+            receipt<< "Seats Booked: ";
+            for(int i=0;i<numSeats;i++){
+                receipt<<seatRows[i]<<seatCols[i]<<" ";
+                
+            }
+            receipt<<"\n Total tickets: "<<numSeats;
+            receipt<<"\n Total amount:  "<<Totalprice;
+            receipt <<"\nPayment Method: " << Paymentmethod << "\n";
+            receipt <<"\nThank you for booking with NSR Cinema!\n";
+            receipt.close();
+            
+            cout << "Booking receipt saved to 'receipt.txt'.\n";
+
+
+
         } else {
             cout << "Some seats could not be booked. Please try again with available seats.\n";
         }
