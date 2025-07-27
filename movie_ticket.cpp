@@ -32,7 +32,7 @@ int getValidatedIntInput(int minVal, int maxVal, const string& prompt) {
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             return choice;
         } else {
-            cout << "❌ Invalid input. Please enter a number between " << minVal << " and " << maxVal << ".\n";
+            cout << "Invalid input. Please enter a number between " << minVal << " and " << maxVal << ".\n";
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
@@ -47,7 +47,7 @@ int getValidatedIntInputMin(int minVal, const string& prompt) {
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             return val;
         } else {
-            cout << "❌ Invalid input. Please enter a number greater than or equal to " << minVal << ".\n";
+            cout << "Invalid input. Please enter a number greater than or equal to " << minVal << ".\n";
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
@@ -61,7 +61,7 @@ string getValidatedSeatInput(int maxRow, int maxCol, const string& prompt) {
         getline(cin, seatId);
 
         if (seatId.length() < 2 || seatId.length() > 3) {
-            cout << "❌ Invalid seat format. Example valid seat: A1\n";
+            cout << "Invalid seat format. Example valid seat: A1\n";
             continue;
         }
 
@@ -69,7 +69,7 @@ string getValidatedSeatInput(int maxRow, int maxCol, const string& prompt) {
 
         char rowChar = seatId[0];
         if (rowChar < 'A' || rowChar >= 'A' + maxRow) {
-            cout << "❌ Invalid row letter. Must be between A and " << (char)('A' + maxRow - 1) << ".\n";
+            cout << "Invalid row letter. Must be between A and " << (char)('A' + maxRow - 1) << ".\n";
             continue;
         }
 
@@ -77,11 +77,11 @@ string getValidatedSeatInput(int maxRow, int maxCol, const string& prompt) {
         try {
             int colNum = stoi(colStr);
             if (colNum < 1 || colNum > maxCol) {
-                cout << "❌ Invalid column number. Must be between 1 and " << maxCol << ".\n";
+                cout << "Invalid column number. Must be between 1 and " << maxCol << ".\n";
                 continue;
             }
         } catch (...) {
-            cout << "❌ Invalid seat number format.\n";
+            cout << "Invalid seat number format.\n";
             continue;
         }
 
@@ -111,7 +111,7 @@ public:
             string u, p;
             while (infile >> u >> p) {
                 if (u == username) {
-                    cout << "⚠️ Username already exists!\n";
+                    cout << "Username already exists!\n";
                     return false;
                 }
             }
@@ -120,7 +120,7 @@ public:
 
         ofstream outfile("users.txt", ios::app);
         outfile << username << " " << password << "\n";
-        cout << "✅ Registration successful!\n";
+        cout << "Registration successful!\n";
         return true;
     }
 
@@ -133,18 +133,18 @@ public:
 
         ifstream infile("users.txt");
         if (!infile) {
-            cout << "❌ No registered users found.\n";
+            cout << "No registered users found.\n";
             return false;
         }
 
         string u, p;
         while (infile >> u >> p) {
             if (u == username && p == password) {
-                cout << "✅ Login successful. Welcome, " << username << "!\n";
+                cout << "Login successful. Welcome, " << username << "!\n";
                 return true;
             }
         }
-        cout << "❌ Invalid username or password.\n";
+        cout << "Invalid username or password.\n";
         return false;
     }
 
@@ -246,7 +246,7 @@ public:
         string filename = "receipt_" + bookingId + ".txt";
         ofstream receipt(filename);
         if (!receipt) {
-            cout << "❌ Error creating receipt file.\n";
+            cout << "Error creating receipt file.\n";
             return;
         }
         receipt << "----- NSR CINEMA BOOKING RECEIPT -----\n";
