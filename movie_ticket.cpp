@@ -602,7 +602,7 @@ int main() {
     vector<Movie> movieList = {
         Movie("M001", "Coolie", "Action/Thriller", 145, 250, "https://youtu.be/qeVfT2iLiu0"),                     
         Movie("M002", "Superman", "Action/Superhero", 143, 350, "https://youtu.be/Ox8ZLF6cGM0"),              
-        Movie("M003", "The Fantastic Four: First Steps", "Action/Adventure", 126, 300, "https://youtu.be/POBI7OhGB18")
+        Movie("M003", "The Fantastic Four: First Steps", "Action/Adventure", 126, 300, "https://youtu.be/18QQWa5MEcs")
 
     };
 
