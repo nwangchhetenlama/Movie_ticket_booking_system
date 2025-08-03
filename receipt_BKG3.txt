@@ -1,9 +1,9 @@
 ----- NSR CINEMA BOOKING RECEIPT -----
-Booking ID: BKG1
+Booking ID: BKG3
 Username: Nwang
 Movie: Coolie
 Date: 2025-08-04
 Showtime: 6:00 PM
-Seats Booked: A2 D4 
-Total Amount: Rs. 500
+Seats Booked: A2 
+Total Amount: Rs. 250
 Thank you for booking with NSR Cinema!

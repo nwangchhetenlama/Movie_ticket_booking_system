@@ -600,9 +600,10 @@ void bookTickets(User& currentUser, Theater& theater, vector<Booking>& bookings)
 
 int main() {
     vector<Movie> movieList = {
-        Movie("M001", "Avatar", "Sci-Fi", 162, 400, "https://youtu.be/5PSNL1qE6VY"),
-        Movie("M002", "The Dark Knight", "Action", 152, 350, "https://youtu.be/EXeTwQWrcwY"),
-        Movie("M003", "Inception", "Thriller", 148, 300, "https://youtu.be/YoHD9XEInc0")
+        Movie("M001", "Coolie", "Action/Thriller", 145, 250, "https://youtu.be/qeVfT2iLiu0"),                     
+        Movie("M002", "Superman", "Action/Superhero", 143, 350, "https://youtu.be/Ox8ZLF6cGM0"),              
+        Movie("M003", "The Fantastic Four: First Steps", "Action/Adventure", 126, 300, "https://youtu.be/POBI7OhGB18")
+
     };
 
     Theater theater("NSR CINEMA", movieList);
