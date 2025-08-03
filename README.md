@@ -28,13 +28,7 @@ Welcome to the **NSR CINEMA Booking System**, a console-based application writte
 ---
 
 
-## 📂 File Structure
 
-.
-├── main.cpp # Main application source code
-├── users.txt # Stores registered user credentials
-├── bookings.txt # Stores booking records
-├── README.md # Project documentation
 
 ## Requirements
 
