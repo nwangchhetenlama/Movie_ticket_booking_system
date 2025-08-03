@@ -27,6 +27,21 @@ Welcome to the **NSR CINEMA Booking System**, a console-based application writte
 
 ---
 
+
+## 📂 File Structure
+
+.
+├── main.cpp # Main application source code
+├── users.txt # Stores registered user credentials
+├── bookings.txt # Stores booking records
+├── README.md # Project documentation
+
+## Requirements
+
+- **C++11 or later**
+- **g++** (or any other compatible C++ compiler)
+- **Standard C++ libraries**
+
 ## How to Run
 
 1. **Compile the program:**
@@ -41,3 +56,9 @@ Welcome to the **NSR CINEMA Booking System**, a console-based application writte
    
    ```bash
    ./cinema_booking_system
+
+## 📝 License
+
+This project is licensed under the **MIT License**.  
+See the [LICENSE](LICENSE) file for full details.
+
